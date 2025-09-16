@@ -1,3 +1,4 @@
+import java.util.Scanner
 import kotlin.random.Random
 
 /*
@@ -87,9 +88,7 @@ val numByte: Byte = 127 // Máximo
 
  */
 
-fun main() {
-
-    /*
+/*
         tipos de ponto flutuantes
 
         o tipo de dados de ponto flutuante representa numeros com uma cada decimal
@@ -105,12 +104,6 @@ fun main() {
 
     val numfloat: Float = 5.75F
     println(numfloat)
-
-        exemplo de Double
-        Double: N° De Bits = 64, BITS Significativos = 53, BITS De Expoente = 11, Digitos Decimais = 15-16.
-
-    val numDouble: Double = 19.99
-     */
 
     //Float com precisão típica (dígitos decimais ~6-7)
 
@@ -130,7 +123,10 @@ fun main() {
     //Float.SIZE_BITS → mostra que o tipo ocupa 32 bits no total.
     println("N° de bits: ${Float.SIZE_BITS}")              // 32 bits
 
+        exemplo de Double
+        Double: N° De Bits = 64, BITS Significativos = 53, BITS De Expoente = 11, Digitos Decimais = 15-16.
 
+    val numDouble: Double = 19.99
     //Double com precisão típica (dígitos decimais ~15-16)
     val numeroDecimal: Double = 123.456789012345
     println("Double com dígitos decimais: $numeroDecimal")
@@ -145,6 +141,81 @@ fun main() {
 
     //Informações gerais sobre Double
     println("N° de bits: ${Double.SIZE_BITS}")              // 64 bits
+     */
 
 
+/*
+        tipo de dados Booleanos
+
+    primeiros os operadores de comparação,
+    Operador Maior que (>)
+    Operador Menor que (<)
+    Operador Igual (=)
+    Operador Diferente (!=)
+
+    Exemplos
+
+    var num = 5
+    var num2 = 10
+
+    if (num < num2) {     // Verdadeiro
+    println("$num é Menor que $num2")
+    }else {               // Falso
+    println("$num é Maior que $num2")
+    }
+    if (num > num2) {     // Falso
+    println("$num é Maior que $num2")
+    }else {               // Verdadeiro
+    println("$num é Menor que $num2")
+    }
+    if (num == num2){     // Falso
+    println("$num é Igual que $num2")
+    }else {               // Verdadeiro
+    println("$num é Diferente que $num2")
+    }
+    if (num != num2){     // Verdadeiro
+    println("$num é Diferente que $num2")
+    }else {               // Falso
+    println("$num é Igual que $num2")
+    }
+ */
+
+fun main() {
+
+    val scanner = Scanner(System.`in`)
+
+    val humano = "Pessoa"
+    val animal = "Bicho"
+
+    var conferir: Boolean = true
+    while (conferir == true) {
+
+        println("(Sim) Ou (Não)")
+        var iniciando = scanner.nextLine()
+
+
+            if (iniciando.equals("Sim")) {
+                var num = 1;
+                while (num > 0) {
+                    println("Voce é ($humano) ou ($animal)! ")
+                    var confirma = scanner.nextLine();
+
+                    if (confirma.equals(humano)) {
+                        println("Ola $humano, Bem Vindo")
+                        conferir = false
+                        num = 0
+                    } else if (confirma.equals(animal)) {
+                        println("Ola $animal, Bem Vindo")
+                        conferir = false
+                        num = 0
+                    } else {
+                        println("Não Entendi")
+                    }
+                }
+        }else if (iniciando == "Não") {
+                println("ADEUS..")
+            } else {
+                println("Não Entendi")
+            }
+    }
 }
