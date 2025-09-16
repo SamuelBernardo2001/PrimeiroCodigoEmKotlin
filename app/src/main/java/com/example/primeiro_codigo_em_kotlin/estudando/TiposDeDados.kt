@@ -89,5 +89,62 @@ val numByte: Byte = 127 // Máximo
 
 fun main() {
 
+    /*
+        tipos de ponto flutuantes
+
+        o tipo de dados de ponto flutuante representa numeros com uma cada decimal
+
+         exemplo
+
+        9,99 ou 3,14515.
+
+        os tipos de dados flutuantes sao Float e Double e Podem Armazenar Numeros fracionarios.
+
+        exemplo de Float : Observação o Float Precisa Termina com o valor do Flutuante e te um "F" no final.
+        Float: N° De Bits = 32, BITS Significativos = 24, BITS De Expoente = 8, Digitos Decimais = 6-7.
+
+    val numfloat: Float = 5.75F
+    println(numfloat)
+
+        exemplo de Double
+        Double: N° De Bits = 64, BITS Significativos = 53, BITS De Expoente = 11, Digitos Decimais = 15-16.
+
+    val numDouble: Double = 19.99
+     */
+
+    //Float com precisão típica (dígitos decimais ~6-7)
+
+    val numeroDecimal2: Float = 123.4567f
+    println("Float com dígitos decimais: $numeroDecimal2")
+
+    //Float grande para mostrar a influência do expoente (8 bits do expoente)
+
+    val numeroExpoente2: Float = 1.23e10f   // 1.23 × 10^10
+    println("Float com expoente: $numeroExpoente2")
+
+    //Float pequeno para mostrar a influência da mantissa (bits significativos = 24)
+
+    val numeroPequeno2: Float = 0.00001234567f
+    println("Float com mantissa detalhada: $numeroPequeno2")
+
+    //Float.SIZE_BITS → mostra que o tipo ocupa 32 bits no total.
+    println("N° de bits: ${Float.SIZE_BITS}")              // 32 bits
+
+
+    //Double com precisão típica (dígitos decimais ~15-16)
+    val numeroDecimal: Double = 123.456789012345
+    println("Double com dígitos decimais: $numeroDecimal")
+
+    //Double grande para mostrar a influência do expoente (11 bits do expoente)
+    val numeroExpoente: Double = 1.23e100   // 1.23 × 10^100
+    println("Double com expoente: $numeroExpoente")
+
+    //Double pequeno para mostrar a influência da mantissa (bits significativos = 53)
+    val numeroPequeno: Double = 0.0000000001234567890123
+    println("Double com mantissa detalhada: $numeroPequeno")
+
+    //Informações gerais sobre Double
+    println("N° de bits: ${Double.SIZE_BITS}")              // 64 bits
+
 
 }
