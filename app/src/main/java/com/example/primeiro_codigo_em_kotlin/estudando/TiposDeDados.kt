@@ -1,37 +1,8 @@
 import kotlin.random.Random
 
 /*
-                              Primeiros codigos.
-    println("Hello. world!")
-                                  Constante global, definido na compilação   \/
-    const val n = "Larissa"       Constante em tempo de compilação (o valor precisa ser conhecido ANTES de rodar).
-    var nome: String              (Ja iniciando o tipo da variavel)
-    var nome1 = "Samuel"          variável mutável
-    val nome2 = "Bernardo"        variável imutável (constante)
-    val ano = 2025                variável imutável (constante)
-    var mes = 9                   variável mutável
-    val dia = 14                  variável imutável (constante)
 
-    println("Bem Vindo, " + nome1 + " " + nome2 + ", Estamos em " + ano + "/" + mes + "/" + dia)
-    println("Primeiro Codigo Em Kotlin Iniciado, $nome1 $nome2 !")
-
-                                Segundo Codigos
-    val num1 = 15
-    val num2 = 5
-
-    val soma = num1 + num2
-    val divisao = num1 / num2
-    val subtracao = num1 - num2
-    val multiplication = num1 * num2
-
-    println("a soma do valor De $num1 + $num2 é $soma")
-    println("a subtração do valor De $num1 + $num2 é $subtracao")
-    println("a divisão do valor De $num1 + $num2 é $divisao")
-    println("a multiplicação do valor De $num1 + $num2 é $multiplication")
-
-    println("O Valor Total Da (Soma,Subtração,divisão e multiplicação) é ${soma+divisao+subtracao+multiplication}")
-
-                                  Terceira Codigos
+                                  Primeiros Codigos
 
 
           Tipos Inteiros - Byte: 8 De BITS
@@ -64,11 +35,10 @@ pode terminar o valor com um "L".
   val numLong: Long = 150000000000L
 */
 
+/*
+            Segundo codigos
 
-
-    fun main() {
-
-        val numByte: Byte = 127 // Máximo
+val numByte: Byte = 127 // Máximo
         val numByte2: Byte = -128 // Mínimo
         val numShort: Short = 32767 // Máximo
         val numShort2: Short = -32768 // Mínimo
@@ -92,7 +62,7 @@ pode terminar o valor com um "L".
         }
 
 
-        // faer a verificação para ver qual o tipo o valor caiu
+        // fazer a verificação para ver qual o tipo o valor caiu
         if (valor.toInt() >= numByte2 && valor.toInt() <= numByte) {
             println("Caiu em Byte: $valor")
         } else if (valor.toInt() >= numShort2 && valor.toInt() <= numShort) {
@@ -115,4 +85,9 @@ pode terminar o valor com um "L".
         }
 
 
-    }
+ */
+
+fun main() {
+
+
+}
