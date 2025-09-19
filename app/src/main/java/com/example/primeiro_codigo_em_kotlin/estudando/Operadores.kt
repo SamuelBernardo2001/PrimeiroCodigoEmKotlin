@@ -311,6 +311,46 @@ fun opeperadoresDeTipos (){
     val z = x as? Int
     println("Valor de z = $z")      // null, não lança exceção
 }
+fun operadoresEspeciais(){
+    /*
+
+    ?:      // Elvis operator (valor padrão se for null) → val nome = entrada ?: "Desconhecido"
+    ?.      // Safe call (chama só se não for null) → nome?.length
+    !!      // Non-null assertion (lança exceção se for null) → nome!!.length
+    ::      // Reference a função/propriedade → ::println ou String::length
+
+     */
+
+    // ?: Elvis operator
+    var nome: String? = null
+    val resultado1 = nome ?: "Desconhecido"  // se nome for null, usa "Desconhecido"
+    println("Nome = $resultado1")            // Nome = Desconhecido
+
+    nome = "Samuel"
+    val resultado2 = nome ?: "Desconhecido"
+    println("Nome = $resultado2")            // Nome = Samuel
+
+    // ?. Safe call
+    val tamanho: Int? = nome?.length        // chama length apenas se nome não for null
+    println("Tamanho do nome = $tamanho")    // Tamanho do nome = 6
+
+    nome = null
+    val tamanhoNull = nome?.length
+    println("Tamanho do nome null = $tamanhoNull") // Tamanho do nome null = null
+
+    // !! Non-null assertion
+    nome = "Samuel"
+    val tamanhoSeguro = nome!!.length        // lança exceção se nome for null
+    println("Tamanho seguro = $tamanhoSeguro") // Tamanho seguro = 6
+
+    // :: Reference a função/propriedade
+
+    val funcRef: (String) -> Unit = ::println// referência da função println
+    funcRef("Chamando println via referência")// Chamando println via referência
+
+    val propRef = String::length            // referência da propriedade length
+    println("Tamanho de 'Kotlin' via referência = ${propRef("Kotlin")}") // 6
+}
 
 fun main() {
     calculadora()
