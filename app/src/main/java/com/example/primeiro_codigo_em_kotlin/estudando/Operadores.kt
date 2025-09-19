@@ -173,6 +173,30 @@ fun operadoresRelacionais(){
     println("b <= a: ${b <= a}")  // true
     println("a <= c: ${a <= c}")  // true
 }
+fun operadoresLogicos(){
+    /*
+
+    &&   // E lógico (AND)
+    ||   // OU lógico (OR)
+    !    // NÃO lógico (NOT)
+
+     */
+
+    val a = true
+    val b = false
+
+    // && E lógico (AND)
+    println("a && b: ${a && b}")   // false, só é true se ambos forem true
+    println("a && a: ${a && a}")   // true
+
+    // || OU lógico (OR)
+    println("a || b: ${a || b}")   // true, é true se pelo menos um for true
+    println("b || b: ${b || b}")   // false
+
+    // ! NÃO lógico (NOT)
+    println("!a: ${!a}")           // false, inverte o valor
+    println("!b: ${!b}")           // true
+}
 
 fun main() {
     calculadora()
