@@ -250,6 +250,37 @@ fun operadoresDeIntevalos(){
         println("$y NÃO está dentro do intervalo 1..5")  // será exibido
     }
 }
+fun operadoresDeIgualdadeEIdentidade(){
+    /*
+
+    ==    // compara valores
+    !=    // compara valores diferentes
+    ===   // compara referências (se apontam para o mesmo objeto)
+    !==   // compara se são objetos diferentes
+
+     */
+
+    // Comparando valores
+    val a = 10
+    val b = 10
+    val c = 5
+
+    println("a == b: ${a == b}")  // true, valores iguais
+    println("a == c: ${a == c}")  // false, valores diferentes
+
+    println("a != b: ${a != b}")  // false, valores iguais
+    println("a != c: ${a != c}")  // true, valores diferentes
+
+    // Comparando referências (objetos)
+    val str1 = "Kotlin"
+    val str2 = "Kotlin"
+    val str3 = String("Kotlin".toCharArray())
+
+    println("str1 === str2: ${str1 === str2}") // true, mesmos objetos (string pool)
+    println("str1 === str3: ${str1 === str3}") // false, objetos diferentes
+    println("str1 !== str3: ${str1 !== str3}") // true, não são o mesmo objeto
+    println("str1 == str3: ${str1 == str3}")   // true, valores iguais
+}
 
 fun main() {
     calculadora()
