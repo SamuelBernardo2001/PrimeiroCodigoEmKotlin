@@ -281,6 +281,36 @@ fun operadoresDeIgualdadeEIdentidade(){
     println("str1 !== str3: ${str1 !== str3}") // true, não são o mesmo objeto
     println("str1 == str3: ${str1 == str3}")   // true, valores iguais
 }
+fun opeperadoresDeTipos (){
+    /*
+
+    is       // verifica o tipo (x is String)
+    !is      // verifica se NÃO é do tipo
+    as       // cast seguro (força conversão, pode lançar exceção)
+    as?      // cast seguro (retorna null se não conseguir converter)
+
+     */
+
+    val x: Any = "Kotlin"   // Any é tipo genérico, pode ser qualquer coisa
+
+    // is → verifica se é do tipo
+    if (x is String) {
+        println("x é uma String")   // será exibido
+    }
+
+    // !is → verifica se NÃO é do tipo
+    if (x !is Int) {
+        println("x NÃO é um Int")   // será exibido
+    }
+
+    // as → cast forçado (pode lançar exceção se o tipo for errado)
+    val y = x as String
+    println("Valor de y = $y")      // Kotlin
+
+    // as? → cast seguro (retorna null se não conseguir converter)
+    val z = x as? Int
+    println("Valor de z = $z")      // null, não lança exceção
+}
 
 fun main() {
     calculadora()
