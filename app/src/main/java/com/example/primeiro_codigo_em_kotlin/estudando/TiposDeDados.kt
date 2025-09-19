@@ -1,94 +1,92 @@
 import java.util.Scanner
 import kotlin.random.Random
 
-/*
-
-                                  Primeiros Codigos
-
-
-          Tipos Inteiros - Byte: 8 De BITS
+fun primeiroTipodeDados(){
+    /*
+            Tipos Inteiros - Byte: 8 De BITS
 
   O tipo de dads Byte ele Pode armazenar Números inteiros de -128 a 127.
   Isso pode ser usado em vez de Int ou outros tipos Inteiros para economizar memoria quando
   tiver certeza de que o valor estara entre -128 e 127.
-  val byteNum: Byte = -128
-  val byteNum2: Byte = 127
+    */
 
-  val soma = byteNum + byteNum2
+    val byteNum: Byte = -128
+    val byteNum2: Byte = 127
 
-  println(soma)
+    val soma = byteNum + byteNum2
 
-          Tipos inteiros - Short: 16 De BITS
+    println(soma)
 
-O tipo de dados Short pode armazenar numeros interios de -32768 a 32767
+    /*
+              Tipos inteiros - Short: 16 De BITS
 
-          Tipos inteiros - Int:32 De BITS
+    O tipo de dados Short pode armazenar numeros interios de -32768 a 32767
 
-O tipo de dados Int pode Srmazenar Numeros inteiros de -2147483648 a 2147483647.
+              Tipos inteiros - Int:32 De BITS
 
-          tipos inteiros - Long: 64 De BITS
+    O tipo de dados Int pode Srmazenar Numeros inteiros de -2147483648 a 2147483647.
 
-O tipode dados Long pode armazenar Numeros interios de -9223372036854775807 a 9223372036854775807
-pode terminar o valor com um "L".
+              tipos inteiros - Long: 64 De BITS
 
-      Exemplo
+    O tipode dados Long pode armazenar Numeros interios de -9223372036854775807 a 9223372036854775807
+    pode terminar o valor com um "L".
 
-  val numLong: Long = 150000000000L
-*/
+          Exemplo
 
-/*
-            Segundo codigos
+      val numLong: Long = 150000000000L
+    */
 
-val numByte: Byte = 127 // Máximo
-        val numByte2: Byte = -128 // Mínimo
-        val numShort: Short = 32767 // Máximo
-        val numShort2: Short = -32768 // Mínimo
-        val numInt: Int = 2147483647 // Máximo
-        val numInt2: Int = -2147483648 // Mínimo
-        val numLong: Long = 9223372036854775807 // Máximo
-        val numLong2: Long = -9223372036854775807 // Mínimo
+}
 
-        val conferir = Random.nextInt(0, 4) // sorteia entre 0,1,2,3
-        var valor: Number // agora é Number, não Any (aceita todos os tipos numéricos) // Any pode receber qualquer tipo
+//codigos depois das explicações do primeiroTipoDeDados
+fun primeiroTipodeDadosContinuacao(){
 
-        // foi sorteado entre 0 a 3 para fazer o Random de tipos de valores aleatorios
-        if (conferir == 0) {
-            valor = Random.nextInt()
-        } else if (conferir == 1) {
-            valor = Random.nextLong()
-        } else if (conferir == 2) {
-            valor = Random.nextInt(Byte.MIN_VALUE.toInt(), Byte.MAX_VALUE.toInt()).toByte()
-        } else {
-            valor = Random.nextInt(Short.MIN_VALUE.toInt(), Short.MAX_VALUE.toInt()).toShort()
-        }
+    val numByte: Byte = 127 // Máximo
+    val numByte2: Byte = -128 // Mínimo
+    val numShort: Short = 32767 // Máximo
+    val numShort2: Short = -32768 // Mínimo
+    val numInt: Int = 2147483647 // Máximo
+    val numInt2: Int = -2147483648 // Mínimo
+    val numLong: Long = 9223372036854775807 // Máximo
+    val numLong2: Long = -9223372036854775807 // Mínimo
 
+    val conferir = Random.nextInt(0, 4) // sorteia entre 0,1,2,3
+    var valor: Number // agora é Number, não Any (aceita todos os tipos numéricos) // Any pode receber qualquer tipo
 
-        // fazer a verificação para ver qual o tipo o valor caiu
-        if (valor.toInt() >= numByte2 && valor.toInt() <= numByte) {
-            println("Caiu em Byte: $valor")
-        } else if (valor.toInt() >= numShort2 && valor.toInt() <= numShort) {
-            println("Caiu em Short: $valor")
-        } else if (valor.toLong() >= numInt2.toLong() && valor.toLong() <= numInt.toLong()) {
-            println("Caiu em Int: $valor")
-        } else if (valor.toLong() >= numLong2 && valor.toLong() <= numLong) {
-            println("Caiu em Long: $valor")
-        }
+    // foi sorteado entre 0 a 3 para fazer o Random de tipos de valores aleatorios
+    if (conferir == 0) {
+        valor = Random.nextInt()
+    } else if (conferir == 1) {
+        valor = Random.nextLong()
+    } else if (conferir == 2) {
+        valor = Random.nextInt(Byte.MIN_VALUE.toInt(), Byte.MAX_VALUE.toInt()).toByte()
+    } else {
+        valor = Random.nextInt(Short.MIN_VALUE.toInt(), Short.MAX_VALUE.toInt()).toShort()
+    }
 
+    // fazer a verificação para ver qual o tipo o valor caiu
+    if (valor.toInt() >= numByte2 && valor.toInt() <= numByte) {
+        println("Caiu em Byte: $valor")
+    } else if (valor.toInt() >= numShort2 && valor.toInt() <= numShort) {
+        println("Caiu em Short: $valor")
+    } else if (valor.toLong() >= numInt2.toLong() && valor.toLong() <= numInt.toLong()) {
+        println("Caiu em Int: $valor")
+    } else if (valor.toLong() >= numLong2 && valor.toLong() <= numLong) {
+        println("Caiu em Long: $valor")
+    }
 
+    // Agora verificamos o TIPO de valor
+    when (valor) {
+        is Int -> println("Caiu em Int: $valor")
+        is Long -> println("Caiu em Long: $valor")
+        is Byte -> println("Caiu em Byte: $valor")
+        is Short -> println("Caiu em Short: $valor")
+        else -> println("Tipo desconhecido")
+    }
+}
 
-        // Agora verificamos o TIPO de valor
-        when (valor) {
-            is Int -> println("Caiu em Int: $valor")
-            is Long -> println("Caiu em Long: $valor")
-            is Byte -> println("Caiu em Byte: $valor")
-            is Short -> println("Caiu em Short: $valor")
-            else -> println("Tipo desconhecido")
-        }
-
-
- */
-
-/*
+fun segundoTipoDeDados (){
+    /*
         tipos de ponto flutuantes
 
         o tipo de dados de ponto flutuante representa numeros com uma cada decimal
@@ -101,6 +99,8 @@ val numByte: Byte = 127 // Máximo
 
         exemplo de Float : Observação o Float Precisa Termina com o valor do Flutuante e te um "F" no final.
         Float: N° De Bits = 32, BITS Significativos = 24, BITS De Expoente = 8, Digitos Decimais = 6-7.
+
+     */
 
     val numfloat: Float = 5.75F
     println(numfloat)
@@ -123,8 +123,8 @@ val numByte: Byte = 127 // Máximo
     //Float.SIZE_BITS → mostra que o tipo ocupa 32 bits no total.
     println("N° de bits: ${Float.SIZE_BITS}")              // 32 bits
 
-        exemplo de Double
-        Double: N° De Bits = 64, BITS Significativos = 53, BITS De Expoente = 11, Digitos Decimais = 15-16.
+    // exemplo de Double
+    // Double: N° De Bits = 64, BITS Significativos = 53, BITS De Expoente = 11, Digitos Decimais = 15-16.
 
     val numDouble: Double = 19.99
     //Double com precisão típica (dígitos decimais ~15-16)
@@ -141,46 +141,42 @@ val numByte: Byte = 127 // Máximo
 
     //Informações gerais sobre Double
     println("N° de bits: ${Double.SIZE_BITS}")              // 64 bits
-     */
+}
 
+fun terceiroTipoDeDados () {
+    /*
+            tipo de dados Booleanos
 
-/*
-        tipo de dados Booleanos
-
-    primeiros os operadores de comparação,
-    Operador Maior que (>)
-    Operador Menor que (<)
-    Operador Igual (=)
-    Operador Diferente (!=)
-
-    Exemplos
-
+        primeiros os operadores de comparação,
+        Operador Maior que (>)
+        Operador Menor que (<)
+        Operador Igual (=)
+        Operador Diferente (!=)
+        */
     var num = 5
     var num2 = 10
 
     if (num < num2) {     // Verdadeiro
-    println("$num é Menor que $num2")
+        println("$num é Menor que $num2")
     }else {               // Falso
-    println("$num é Maior que $num2")
+        println("$num é Maior que $num2")
     }
     if (num > num2) {     // Falso
-    println("$num é Maior que $num2")
+        println("$num é Maior que $num2")
     }else {               // Verdadeiro
-    println("$num é Menor que $num2")
+        println("$num é Menor que $num2")
     }
     if (num == num2){     // Falso
-    println("$num é Igual que $num2")
+        println("$num é Igual que $num2")
     }else {               // Verdadeiro
-    println("$num é Diferente que $num2")
+        println("$num é Diferente que $num2")
     }
     if (num != num2){     // Verdadeiro
-    println("$num é Diferente que $num2")
+        println("$num é Diferente que $num2")
     }else {               // Falso
-    println("$num é Igual que $num2")
+        println("$num é Igual que $num2")
     }
- */
-
-fun main() {
+    // ================================================= //
 
     val scanner = Scanner(System.`in`)
 
@@ -194,28 +190,34 @@ fun main() {
         var iniciando = scanner.nextLine()
 
 
-            if (iniciando.equals("Sim")) {
-                var num = 1;
-                while (num > 0) {
-                    println("Voce é ($humano) ou ($animal)! ")
-                    var confirma = scanner.nextLine();
+        if (iniciando.equals("Sim")) {
+            var num = 1;
+            while (num > 0) {
+                println("Voce é ($humano) ou ($animal)! ")
+                var confirma = scanner.nextLine();
 
-                    if (confirma.equals(humano)) {
-                        println("Ola $humano, Bem Vindo")
-                        conferir = false
-                        num = 0
-                    } else if (confirma.equals(animal)) {
-                        println("Ola $animal, Bem Vindo")
-                        conferir = false
-                        num = 0
-                    } else {
-                        println("Não Entendi")
-                    }
+                if (confirma.equals(humano)) {
+                    println("Ola $humano, Bem Vindo")
+                    conferir = false
+                    num = 0
+                } else if (confirma.equals(animal)) {
+                    println("Ola $animal, Bem Vindo")
+                    conferir = false
+                    num = 0
+                } else {
+                    println("Não Entendi")
                 }
-        }else if (iniciando == "Não") {
-                println("ADEUS..")
-            } else {
-                println("Não Entendi")
             }
+        }else if (iniciando == "Não") {
+            println("ADEUS..")
+        } else {
+            println("Não Entendi")
+        }
     }
+
+}
+
+fun main() {
+
+
 }
