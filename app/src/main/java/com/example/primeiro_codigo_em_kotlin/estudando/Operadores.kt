@@ -92,6 +92,46 @@ fun operadoresMatematicos (){
     println("Depois do decremento: d = $d")  // d = 7
 
 }
+fun operadoresDeAtribuicao(){
+
+    /*
+
+    =    // atribuição simples
+    +=   // soma e atribui
+    -=   // subtrai e atribui
+    *=   // multiplica e atribui
+    /=   // divide e atribui
+    %=   // resto e atribui
+
+     */
+
+    var a = 10
+    var b = 3
+
+    // = atribuição simples
+    var x = 5
+    println("Atribuição simples: x = $x")  // x = 5
+
+    // += soma e atribui
+    a += b   // equivale a: a = a + b
+    println("a += b → a = $a")  // 10 + 3 = 13
+
+    // -= subtrai e atribui
+    a -= b   // equivale a: a = a - b
+    println("a -= b → a = $a")  // 13 - 3 = 10
+
+    // *= multiplica e atribui
+    a *= b   // equivale a: a = a * b
+    println("a *= b → a = $a")  // 10 * 3 = 30
+
+    // /= divide e atribui
+    a /= b   // equivale a: a = a / b
+    println("a /= b → a = $a")  // 30 / 3 = 10
+
+    // %= resto e atribui
+    a %= b   // equivale a: a = a % b
+    println("a %= b → a = $a")  // 10 % 3 = 1
+}
 
 fun main() {
     calculadora()
