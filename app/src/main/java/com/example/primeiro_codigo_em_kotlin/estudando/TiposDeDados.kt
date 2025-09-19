@@ -219,5 +219,20 @@ fun terceiroTipoDeDados () {
 
 fun main() {
 
+    /*
+    O tipo de dados Char é Usado para armazenar um unico caractere, Um valor char deve estar entre aspas simples como 'A' ou 'c',
+     */
+
+    val scanner = Scanner(System.`in`)
+    println("Informe um único caractere. Exemplos = [a] [2] [,]")
+
+    val entrada = scanner.nextLine()
+
+    if (entrada.length != 1) {
+        println("Não pode ter mais que 1 caractere")
+    } else {
+        val caractere: Char = entrada[0] // pega o primeiro caractere da string
+        println("Perfeito! Obrigado. O caractere escolhido foi $caractere")
+    }
 
 }
