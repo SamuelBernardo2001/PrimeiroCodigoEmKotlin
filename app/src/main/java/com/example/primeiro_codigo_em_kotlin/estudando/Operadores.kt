@@ -197,6 +197,59 @@ fun operadoresLogicos(){
     println("!a: ${!a}")           // false, inverte o valor
     println("!b: ${!b}")           // true
 }
+fun operadoresDeIntevalos(){
+    /*
+
+    ..       // cria um intervalo inclusivo (1..5 → 1,2,3,4,5)
+    downTo   // intervalo decrescente (5 downTo 1 → 5,4,3,2,1)
+    step     // define o passo (1..10 step 2 → 1,3,5,7,9)
+    until    // cria intervalo exclusivo do último número (1 until 5 → 1,2,3,4)
+    in       // verifica se está dentro de um intervalo (x in 1..5)
+    !in      // verifica se NÃO está dentro
+
+
+     */
+
+    // .. intervalo inclusivo
+    println("Intervalo inclusivo 1..5:")
+    for (i in 1..5) {
+        print("$i ")  // 1 2 3 4 5
+    }
+    println()
+
+    // downTo intervalo decrescente
+    println("Intervalo decrescente 5 downTo 1:")
+    for (i in 5 downTo 1) {
+        print("$i ")  // 5 4 3 2 1
+    }
+    println()
+
+    // step define o passo
+    println("Intervalo com passo 2 de 1..10 step 2:")
+    for (i in 1..10 step 2) {
+        print("$i ")  // 1 3 5 7 9
+    }
+    println()
+
+    // until cria intervalo exclusivo do último número
+    println("Intervalo exclusivo 1 until 5:")
+    for (i in 1 until 5) {
+        print("$i ")  // 1 2 3 4
+    }
+    println()
+
+    // in verifica se está dentro do intervalo
+    val x = 3
+    if (x in 1..5) {
+        println("$x está dentro do intervalo 1..5")  // será exibido
+    }
+
+    // !in verifica se NÃO está dentro
+    val y = 10
+    if (y !in 1..5) {
+        println("$y NÃO está dentro do intervalo 1..5")  // será exibido
+    }
+}
 
 fun main() {
     calculadora()
