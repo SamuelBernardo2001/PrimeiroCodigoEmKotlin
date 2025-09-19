@@ -132,6 +132,47 @@ fun operadoresDeAtribuicao(){
     a %= b   // equivale a: a = a % b
     println("a %= b → a = $a")  // 10 % 3 = 1
 }
+fun operadoresRelacionais(){
+    /*
+
+    ==   // igual
+    !=   // diferente
+    >    // maior que
+    <    // menor que
+    >=   // maior ou igual
+    <=   // menor ou igual
+
+     */
+
+    val a = 10
+    val b = 5
+    val c = 10
+
+    // == igual
+    println("a == b: ${a == b}")  // false
+    println("a == c: ${a == c}")  // true
+
+    // != diferente
+    println("a != b: ${a != b}")  // true
+    println("a != c: ${a != c}")  // false
+
+    // > maior que
+    println("a > b: ${a > b}")    // true
+    println("b > a: ${b > a}")    // false
+
+    // < menor que
+    println("a < b: ${a < b}")    // false
+    println("b < a: ${b < a}")    // true
+
+    // >= maior ou igual
+    println("a >= b: ${a >= b}")  // true
+    println("a >= c: ${a >= c}")  // true
+
+    // <= menor ou igual
+    println("a <= b: ${a <= b}")  // false
+    println("b <= a: ${b <= a}")  // true
+    println("a <= c: ${a <= c}")  // true
+}
 
 fun main() {
     calculadora()
