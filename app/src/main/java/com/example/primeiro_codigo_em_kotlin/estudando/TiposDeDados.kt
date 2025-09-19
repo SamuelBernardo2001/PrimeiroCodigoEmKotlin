@@ -214,10 +214,9 @@ fun terceiroTipoDeDados () {
             println("Não Entendi")
         }
     }
-
 }
 
-fun main() {
+fun quatroTipoDeDados () {
 
     /*
     O tipo de dados Char é Usado para armazenar um unico caractere, Um valor char deve estar entre aspas simples como 'A' ou 'c',
@@ -234,5 +233,50 @@ fun main() {
         val caractere: Char = entrada[0] // pega o primeiro caractere da string
         println("Perfeito! Obrigado. O caractere escolhido foi $caractere")
     }
+
+}
+fun main() {
+
+    /*
+    O tipo de dados String é usado para armazenar texto, uma String contem uma coleção de caracteres entre aspas duplas.
+     */
+
+    val scanner = Scanner(System.`in`)
+
+    println("PrimeiroNome:")
+    var primeiroNome = scanner.nextLine()
+    println("SegundoNome:")
+    val segundoNome: String = scanner.nextLine()
+
+    if (primeiroNome.isBlank() && segundoNome.isBlank()) {
+        println("Os nomes não podem estar vazios")
+    } else if (primeiroNome.isBlank()) {
+        println("Primeiro Nome está vazio")
+    } else if (segundoNome.isBlank()) {
+        println("Segundo Nome está vazio")
+    }else{
+        println("Olá $primeiroNome $segundoNome")
+        primeiroNome = "Ezequiel"
+        println("Agora seu primeiro nome virou $primeiroNome")
+    }
+
+    /*
+    acessando um elementro dos caracteres de uma String, voce consultar o elemento com o numero do indice entre []colchetes
+     */
+
+    val recebe: Char = primeiroNome[1]
+    println("Quantidade de letras do primeiro nome: ${primeiroNome.length}")
+    println("Segunda letra do primeiro nome: ${primeiroNome[1]}")
+    println("Terceira letra do segundo nome: ${segundoNome[2]}")
+
+    println("Maiúsculo: ${primeiroNome.uppercase()}")
+    println("Minúsculo: ${segundoNome.lowercase()}")
+
+    println("Comparando nomes: ${primeiroNome.compareTo(segundoNome)}")
+
+    val n1 = "samuel"
+    val n2 = "samuel"
+    println("Comparando n1 e n2: ${n1.compareTo(n2)}") // sempre 0
+    println(primeiroNome.plus(segundoNome))
 
 }
