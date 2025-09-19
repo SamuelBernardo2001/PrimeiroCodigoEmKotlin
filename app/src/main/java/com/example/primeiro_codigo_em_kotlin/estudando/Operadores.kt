@@ -47,6 +47,51 @@ fun calculadora() {
     }
 }
 
+fun operadoresMatematicos (){
+
+    /*
+
+    +   // adição
+    -   // subtração
+    *   // multiplicação
+    /   // divisão
+    %   // módulo (resto da divisão)
+    ++  // adicionar o valor 1
+    --  // diminuir o valor 1
+
+    */
+
+    var a = 10
+    var b = 3
+
+    // + adição
+    println("Adição: $a + $b = ${a + b}")   // 10 + 3 = 13
+
+    // - subtração
+    println("Subtração: $a - $b = ${a - b}") // 10 - 3 = 7
+
+    // * multiplicação
+    println("Multiplicação: $a * $b = ${a * b}") // 10 * 3 = 30
+
+    // / divisão
+    println("Divisão: $a / $b = ${a / b}")   // 10 / 3 = 3 (inteiro, sem casas decimais)
+
+    // % módulo (resto da divisão)
+    println("Módulo: $a % $b = ${a % b}")   // 10 % 3 = 1
+
+    // ++ adicionar o valor 1
+    var c = 5
+    println("Antes do incremento: c = $c")
+    c++
+    println("Depois do incremento: c = $c")  // c = 6
+
+    // -- diminuir o valor 1
+    var d = 8
+    println("Antes do decremento: d = $d")
+    d--
+    println("Depois do decremento: d = $d")  // d = 7
+
+}
 
 fun main() {
     calculadora()
