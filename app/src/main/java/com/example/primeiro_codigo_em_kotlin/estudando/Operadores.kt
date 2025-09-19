@@ -382,5 +382,4 @@ fun operadoresDeColecao(){
 
 
 fun main() {
-    calculadora()
 }
