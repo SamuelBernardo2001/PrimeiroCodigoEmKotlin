@@ -351,6 +351,35 @@ fun operadoresEspeciais(){
     val propRef = String::length            // referência da propriedade length
     println("Tamanho de 'Kotlin' via referência = ${propRef("Kotlin")}") // 6
 }
+fun operadoresDeColecao(){
+    /*
+
+    in      // verifica se um elemento está na coleção → if (2 in listOf(1,2,3))
+    !in     // verifica se não está na coleção
+
+     */
+
+    val lista = listOf(1, 2, 3, 4, 5)
+
+    // in → verifica se o elemento está na coleção
+    val numero1 = 2
+    if (numero1 in lista) {
+        println("$numero1 está na lista")  // será exibido
+    }
+
+    // !in → verifica se o elemento NÃO está na coleção
+    val numero2 = 10
+    if (numero2 !in lista) {
+        println("$numero2 NÃO está na lista")  // será exibido
+    }
+
+    // Também funciona com intervalos
+    val x = 7
+    if (x in 1..10) {
+        println("$x está no intervalo de 1 a 10") // será exibido
+    }
+}
+
 
 fun main() {
     calculadora()
