@@ -43,20 +43,45 @@ essas condiçoes sao utilizadas de acordo com a logica do sistema
 }
 
 fun condicionais2 () {
-    val semaforo = "Verde"
-
-    when (semaforo) {
-        "Vermelho" -> {
-            println("Pare")
-        }
-        "Amarelo" -> {
-            println("Aviso")
-        }
-        "Verde" -> {
-            println("Livre")
-        }
-        else -> {
-            println("Opção invalida.")
-        }
+    val semaforo = "Vermelho"
+    val notifica = when (semaforo) {
+            "Vermelho" -> {
+                "Pare"
+            }
+            "Amarelo" -> {
+                "Aviso"
+            }
+            "Verde" -> {
+                "Livre"
+            }
+            else -> {
+                "Opção invalida."
+            }
     }
+    println(notifica)
+}
+
+fun condicionais3 () {
+    val diasDaSemana = 7
+    var recebeUmDiaDaSemana = 3
+
+    if (diasDaSemana > 7 && diasDaSemana < 1) {
+        println("Uma Semana So Possuir 7 Dias, passou de 7 dias ja Entra na Outra Semana")
+    } else {
+        var resultado = when (recebeUmDiaDaSemana) {
+            1 -> "Segunda-feira"
+            2 -> "Terça-feira"
+            3 -> "Quarta-feira"
+            4 -> "Quinta-feira"
+            5 -> "Sexta-feira"
+            6 -> "Sabado"
+            7 -> "Domingo"
+            else -> "Dia Invalido!"
+        }
+        println(resultado)
+    }
+}
+
+fun main () {
+    condicionais3()
 }
