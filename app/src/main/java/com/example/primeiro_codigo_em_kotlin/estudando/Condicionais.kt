@@ -41,3 +41,22 @@ essas condiçoes sao utilizadas de acordo com a logica do sistema
         println("Sim ${c} é Igual ${b}")
     }
 }
+
+fun condicionais2 () {
+    val semaforo = "Verde"
+
+    when (semaforo) {
+        "Vermelho" -> {
+            println("Pare")
+        }
+        "Amarelo" -> {
+            println("Aviso")
+        }
+        "Verde" -> {
+            println("Livre")
+        }
+        else -> {
+            println("Opção invalida.")
+        }
+    }
+}
